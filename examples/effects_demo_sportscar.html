@@ -171,26 +171,36 @@
 
     // Custom lights
 
-    scene.clearLights();
+    //scene.clearLights();
 
-    new xeogl.AmbientLight({
-        color: [1.0, 1.0, 1.0]
-    });
-    new xeogl.PointLight({
-        pos: [-40, 30, 40],
-        color: [1.0, 1.0, 1.0],
-        space: "view"
-    });
-    new xeogl.PointLight({
-        pos: [40, 20, 20],
-        color: [1.0, 1.0, 1.0],
-        space: "view"
-    });
-    new xeogl.PointLight({
-        pos: [-20, 80, -80],
-        color: [1.0, 1.0, 1.0],
-        space: "view"
-    });
+    // Custom lights
+scene.clearLights();
+new xeogl.AmbientLight({ color: [0.8, 0.8, 0.8] }); // Adjust ambient light color
+new xeogl.PointLight({
+    pos: [-40, 50, 40],
+    color: [1.0, 0.0, 0.0], // Red color for dramatic effect
+    space: "view"
+});
+
+
+    // new xeogl.AmbientLight({
+    //     color: [1.0, 1.0, 1.0]
+    // });
+    // new xeogl.PointLight({
+    //     pos: [-40, 30, 40],
+    //     color: [1.0, 1.0, 1.0],
+    //     space: "view"
+    // });
+    // new xeogl.PointLight({
+    //     pos: [40, 20, 20],
+    //     color: [1.0, 1.0, 1.0],
+    //     space: "view"
+    // });
+    // new xeogl.PointLight({
+    //     pos: [-20, 80, -80],
+    //     color: [1.0, 1.0, 1.0],
+    //     space: "view"
+    // });
 
     // Load model
 
@@ -201,12 +211,20 @@
 
     // Set up camera
 
-    var camera = xeogl.getDefaultScene().camera;
-    camera.eye = [-4.98, 1.89, 0.72];
-    camera.look = [0, 0.52, -0.05];
-    camera.up = [0.26, 0.54, -0.05];
+    // var camera = xeogl.getDefaultScene().camera;
+    // camera.eye = [-4.98, 1.89, 0.72];
+    // camera.look = [0, 0.52, -0.05];
+    // camera.up = [0.26, 0.54, -0.05];
 
+    // camera.orbitYaw(200);
+
+    // Set up camera
+    var camera = xeogl.getDefaultScene().camera;
+    camera.eye = [0, 2, 5]; // New camera position for a different view
+    camera.look = [0, 0, 0]; // Focus point
+    camera.up = [0, 1, 0]; // Up direction
     camera.orbitYaw(200);
+
 
     var cameraControl = new xeogl.CameraControl();
 

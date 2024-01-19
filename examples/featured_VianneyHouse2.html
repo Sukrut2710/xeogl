@@ -33,12 +33,18 @@
     camera.look = [27.641752243041992, 20.933584213256836, -19.75855827331543];
     camera.up = [0.12662741541862488, 0.9919988512992859, 0.015218700282275677];
 
+    // camera.eye = [0, 50, 100]; // New camera position
+    // camera.look = [0, 0, 0]; // New focus point
+    // camera.up = [0, 1, 0]; // Adjust up direction
+
+
     var spinning = true;
 
     model.on("loaded", function () {
         scene.on("tick", function () { // Slowly orbit the camera
             if (spinning) {
                 camera.orbitYaw(0.25);
+                //camera.orbitYaw(0.5); // Increase the speed of the orbit
             }
         });
     });
@@ -61,6 +67,7 @@
         intensity: 0.8,
         space: "world"
     });
+
     new xeogl.DirLight({
         dir: [0.6, -0.4, -0.2],
         color: [0.90, 0.90, 0.90],
