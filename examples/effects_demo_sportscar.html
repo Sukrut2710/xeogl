@@ -101,7 +101,7 @@
 
     function spin() {
         scene.on("tick", function () {
-            scene.camera.orbitYaw(0.2);
+            scene.camera.orbitYaw(0.5);
         });
     }
 
@@ -173,41 +173,41 @@
 
     scene.clearLights();
 
-    // Custom lights
-// scene.clearLights();
-// new xeogl.AmbientLight({ color: [0.9, 0.9, 0.9] }); // Adjust ambient light color
-// new xeogl.PointLight({
-//     pos: [-40, 50, 40],
-//     color: [1.0, 0.0, 0.0], // Red color for dramatic effect
-//     space: "view"
-// });
+    Custom lights
+scene.clearLights();
+new xeogl.AmbientLight({ color: [0.9, 0.9, 0.9] }); // Adjust ambient light color
+new xeogl.PointLight({
+    pos: [-40, 50, 40],
+    color: [1.0, 0.0, 0.0], // Red color for dramatic effect
+    space: "view"
+});
 
 
-    new xeogl.AmbientLight({
-        color: [1.0, 1.0, 1.0]
-    });
-    new xeogl.PointLight({
-        pos: [-40, 30, 40],
-        color: [1.0, 1.0, 1.0],
-        space: "view"
-    });
-    new xeogl.PointLight({
-        pos: [40, 20, 20],
-        color: [1.0, 1.0, 1.0],
-        space: "view"
-    });
-    new xeogl.PointLight({
-        pos: [-20, 80, -80],
-        color: [1.0, 1.0, 1.0],
-        space: "view"
-    });
+    // new xeogl.AmbientLight({
+    //     color: [1.0, 1.0, 1.0]
+    // });
+    // new xeogl.PointLight({
+    //     pos: [-40, 30, 40],
+    //     color: [1.0, 1.0, 1.0],
+    //     space: "view"
+    // });
+    // new xeogl.PointLight({
+    //     pos: [40, 20, 20],
+    //     color: [1.0, 1.0, 1.0],
+    //     space: "view"
+    // });
+    // new xeogl.PointLight({
+    //     pos: [-20, 80, -80],
+    //     color: [1.0, 1.0, 1.0],
+    //     space: "view"
+    // });
 
-    // Load model
+    // // Load model
 
-    var model = new xeogl.OBJModel({
-        id: "sportsCar",
-        src: "models/obj/sportsCar/sportsCar.obj"
-    });
+    // var model = new xeogl.OBJModel({
+    //     id: "sportsCar",
+    //     src: "models/obj/sportsCar/sportsCar.obj"
+    // });
 
     // Set up camera
 
@@ -223,7 +223,7 @@
     camera.eye = [0, 2, 5]; // New camera position for a different view
     camera.look = [0, 0, 0]; // Focus point
     camera.up = [0, 1, 0]; // Up direction
-    camera.orbitYaw(200);
+    camera.orbitYaw(2000);
 
 
     var cameraControl = new xeogl.CameraControl();
