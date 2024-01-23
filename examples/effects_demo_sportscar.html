@@ -125,7 +125,7 @@
             div.style["padding-bottom"] = "3px";
             div.style["padding-left"] = "80px";
             div.style["padding-right"] = "14px";
-//            div.style["border"] = "2px solid white";
+//          div.style["border"] = "2px solid white";
             div.style["font-size"] = fontSize ? "" + fontSize + "px" : "40px";
             div.style["font-weight"] = "900";
             div.style.opacity = "0.9";
@@ -171,36 +171,36 @@
 
     // Custom lights
 
-    //scene.clearLights();
+    scene.clearLights();
 
     // Custom lights
-scene.clearLights();
-new xeogl.AmbientLight({ color: [0.8, 0.8, 0.8] }); // Adjust ambient light color
-new xeogl.PointLight({
-    pos: [-40, 50, 40],
-    color: [1.0, 0.0, 0.0], // Red color for dramatic effect
-    space: "view"
-});
+// scene.clearLights();
+// new xeogl.AmbientLight({ color: [0.9, 0.9, 0.9] }); // Adjust ambient light color
+// new xeogl.PointLight({
+//     pos: [-40, 50, 40],
+//     color: [1.0, 0.0, 0.0], // Red color for dramatic effect
+//     space: "view"
+// });
 
 
-    // new xeogl.AmbientLight({
-    //     color: [1.0, 1.0, 1.0]
-    // });
-    // new xeogl.PointLight({
-    //     pos: [-40, 30, 40],
-    //     color: [1.0, 1.0, 1.0],
-    //     space: "view"
-    // });
-    // new xeogl.PointLight({
-    //     pos: [40, 20, 20],
-    //     color: [1.0, 1.0, 1.0],
-    //     space: "view"
-    // });
-    // new xeogl.PointLight({
-    //     pos: [-20, 80, -80],
-    //     color: [1.0, 1.0, 1.0],
-    //     space: "view"
-    // });
+    new xeogl.AmbientLight({
+        color: [1.0, 1.0, 1.0]
+    });
+    new xeogl.PointLight({
+        pos: [-40, 30, 40],
+        color: [1.0, 1.0, 1.0],
+        space: "view"
+    });
+    new xeogl.PointLight({
+        pos: [40, 20, 20],
+        color: [1.0, 1.0, 1.0],
+        space: "view"
+    });
+    new xeogl.PointLight({
+        pos: [-20, 80, -80],
+        color: [1.0, 1.0, 1.0],
+        space: "view"
+    });
 
     // Load model
 
